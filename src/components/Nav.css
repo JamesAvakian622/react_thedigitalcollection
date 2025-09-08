@@ -1,0 +1,173 @@
+/* Nav.css - pure CSS file, remove JS imports and styled-components syntax */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: #333;
+    color: #fff;
+    padding: 1rem;
+    margin-bottom: -3%;
+    margin-top: -1%;
+    z-index: 1000;
+}
+
+.navbar-left .logo {
+    font-size: 2.25rem;
+    font-weight: bold;
+    margin-top: 10%;
+    color: #fff;
+    text-decoration: none;
+}
+
+.logo {
+    margin-left: 15%;
+    font-size: 2.25rem;
+}
+
+.logo:hover {
+    background-color: blue;
+    font-size: 1.5rem;
+}
+
+.logotitle {
+    margin-left: 20%;
+    max-width: 300px;
+    font-size: 1.5rem !important;
+    margin-top: -10%;
+}
+
+.navbar-center .nav-links {
+    list-style-type: none;
+    display: flex;
+    font-size: 1.5rem;
+    margin: 0;
+    padding: 0;
+ 
+
+    li {
+        margin-right: 1rem;
+        gap: 30px;
+        font-size: large;
+           margin-top: 13%;
+    }
+
+    a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 1.25rem;
+        font-style: bold;
+        word-spacing: 30px;
+        border: 2px solid transparent;
+
+        &:hover {
+            background-color: rgb(246, 243, 238);
+            width: 100%;
+            display:    block;
+            color: rgb(228, 11, 11);
+            padding-left: 1%;
+            border: 2px solid #333;
+            border-radius: 8px;
+        }
+    }
+}
+
+.navbar-right {
+    display: flex;
+    align-items: center;
+
+    .cart-icon,
+    .user-icon {
+        color: #fff;
+        text-decoration: none;
+        margin-left: 1rem;
+        position: relative;
+    }
+
+    .cart-count {
+        background-color: #f44336;
+        color: #fff;
+        border-radius: 50%;
+        padding: 0.2rem 0.5rem;
+        font-size: 1.8rem;
+        position: absolute;
+        top: -0.5rem;
+        right: -0.5rem;
+    }
+}
+
+
+.hamburger {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #fff;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    #navMenu {
+        display: none;
+        width: 100%;
+    }
+
+    #navMenu.show {
+        display: block;
+    }
+
+    .navbar-center .nav-links {
+        flex-direction: column;
+        width: 100%;
+        margin-top: 1rem;
+    }
+
+    .navbar-center .nav-links li {
+        margin-right: 0;
+        margin-bottom: 1rem;
+        font-size: 85%;
+    }
+
+    .logo,
+    .logotitle {
+        margin: 0 0 1rem 0;
+        font-size: 75% !important;
+    }
+
+    .logo:hover {
+        font-size: 55%;
+    }
+}
+
+@media (max-width: 375px) {
+    .navbar-center .nav-links li {
+        font-size: 45% !important;
+    }
+
+    .logo,
+    .logotitle {
+        font-size: 45%;
+    }
+}
+
+.image {
+    width: 30%;
+    max-height: 30%;
+    max-width: 30%;
+    height: auto;
+}
+
+.navbar-brand{
+    font-size: 2.25rem;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+}
