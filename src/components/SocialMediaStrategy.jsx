@@ -1,8 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 
-
-
 const StrategyWrapper = styled.div`
   padding: 2rem;
   background-color: #f0f0f0;
@@ -11,11 +9,13 @@ const StrategyWrapper = styled.div`
 const StrategyTitle = styled.h2`
   font-size: 1.8rem;
   color: #c00;
+  margin-bottom: 1rem;
 `;
 
 const StrategyList = styled.ul`
   list-style-type: square;
   padding-left: 1.5rem;
+  margin-bottom: 2rem;
 `;
 
 const StrategyItem = styled.li`
@@ -24,12 +24,22 @@ const StrategyItem = styled.li`
   color: #333;
 `;
 
+const HashtagGroup = styled.div`
+  margin-bottom: 2rem;
+`;
+
 const Hashtag = styled.span`
   background-color: #e0e0e0;
   padding: 0.2rem 0.5rem;
   margin-right: 0.5rem;
   border-radius: 4px;
   font-weight: bold;
+  display: inline-block;
+  margin-bottom: 0.5rem;
+`;
+
+const ImageWrapper = styled.div`
+  text-align: center;
 `;
 
 const SocialMediaStrategy = () => (
@@ -41,8 +51,9 @@ const SocialMediaStrategy = () => (
       <StrategyItem>X (Twitter): Corvette news, trivia, motorsports updates</StrategyItem>
       <StrategyItem>YouTube/TikTok: Restoration tips, track footage, concept reveals</StrategyItem>
     </StrategyList>
+
     <StrategyTitle>Hashtags</StrategyTitle>
-    <div>
+    <HashtagGroup>
       <Hashtag>#CorvetteJournal</Hashtag>
       <Hashtag>#CorvetteWeb</Hashtag>
       <Hashtag>#CorvetteReporter</Hashtag>
@@ -50,7 +61,11 @@ const SocialMediaStrategy = () => (
       <Hashtag>#VetteLife</Hashtag>
       <Hashtag>#70YearsOfCorvette</Hashtag>
       <Hashtag>#CorvetteCulture</Hashtag>
-    </div>
+    </HashtagGroup>
+
+    <ImageWrapper>
+      <img src="/opauto.png" alt="Corvette Hero Banner" width={400} height={150} />
+    </ImageWrapper>
   </StrategyWrapper>
 );
 

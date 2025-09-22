@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
-import './components/Nav.css'
+import './components/Nav.css';
 import Navbar from './Navbar';
 
 const SectionWrapper = styled(motion.section)`
@@ -65,30 +65,48 @@ const fadeIn = {
 };
 
 const CorvetteWeb = () => (
-    <>
-  <Navbar />
-  <div className='image'>
-    <img src="/z1.png" alt="Corvette Model" />
-  </div>
- 
-  <SectionWrapper initial="hidden" animate="visible" variants={fadeIn}>
-  
+  <>
+    <Navbar />
+
+    <div className="center">
+      <div className="responsive">
+        <div className="gallery100">
+          <a href="/z1.png" target="_blank" rel="noopener noreferrer">
+            <img src="/z1.png" alt="Corvette Images Information" width="100%" height="100%" />
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <SectionWrapper initial="hidden" animate="visible" variants={fadeIn}>
       <Title>The Corvette Web.com</Title>
-      <link to="Page1Photos.jsx">Photo Albums</link>
-      <Subtitle>Ownership, Buying, and Model Insights</Subtitle>
+
+      {/* Replace with <Link> if routing to internal page */}
+      <p>
+        <a href="/Page1Photos" className="photo-link">Photo Albums</a>
+      </p>
+
+      <Subtitle>Insights into Corvette Model Ownership, Buying, and Maintenance</Subtitle>
+
       <Paragraph>
-        The Corvette Web is your visual model photographic website for pre-owners, enthusiasts, and legacy Corvette
-        vehicles. A visual photographic journey into the current, 2026, racing, and concept editions of the Chevrolet Corvette models.
+        The Corvette Web is your visual model photography site for pre-owners, enthusiasts, and legacy Corvette fans. It offers a photographic journey through current, 2026, racing, and concept editions of Chevrolet Corvette models.
       </Paragraph>
+
       <List>
         <ListItem>Detailed photographs of current models</ListItem>
         <ListItem>Photographic breakdown of trim levels, options, and performance packages</ListItem>
-        <ListItem>Photographic 2026, Racing, and Concept carsEM parts sourcing: who supplies them and where to find them</ListItem>
+        <ListItem>Photographs of 2026, racing, and concept cars; OEM parts sourcing—who supplies them and where to find them</ListItem>
       </List>
+
       <Paragraph>
         Built for new buyers and owners, The Corvette Web complements Chevrolet’s official resources by offering real-world insights, supplier connections, and a deeper look into the Corvette legacy.
       </Paragraph>
-    </SectionWrapper></>
+
+      <div className="center">
+        <img src="/opauto.png" alt="Corvette Hero" width={400} height={150} />
+      </div>
+    </SectionWrapper>
+  </>
 );
 
 export default CorvetteWeb;

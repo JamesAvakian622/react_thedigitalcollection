@@ -1,16 +1,25 @@
 {
-  "name": "abc",
-  "version": "0.1.0",
-  "private": true,
+ "name": "corvette-site",
+  "version": "1.0.0",
+  "description": "A Corvette-themed React website with Cloudinary image hosting and Okta authentication.",
+  "main": "api/index.js",
   "dependencies": {
+    "@okta/okta-auth-js": "^7.14.0",
+    "@okta/okta-react": "^6.10.0",
     "@testing-library/dom": "^10.4.1",
     "@testing-library/jest-dom": "^6.8.0",
     "@testing-library/react": "^16.3.0",
     "@testing-library/user-event": "^13.5.0",
+    "cloudinary": "^2.7.0",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.2",
+    "express": "^5.1.0",
     "framer-motion": "^12.23.12",
+    "jsonwebtoken": "^9.0.2",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
-    "react-router-dom": "^7.8.2",
+    "react-responsive-carousel": "^3.2.23",
+    "react-router-dom": "^7.9.1",
     "react-scripts": "5.0.1",
     "react-slick": "^0.31.0",
     "styled-components": "^6.1.19",
@@ -39,5 +48,49 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JamesAvakian622/react_thedigitalcollection.git"
+  },
+    "devDependencies": {
+    "@vercel/node": "^1.14.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "keywords": [
+    "react",
+    "express",
+    "cloudinary",
+    "okta",
+    "vercel",
+    "corvette",
+    "stingray",
+"z06",
+    "c8",
+    "c7",
+    "c6",
+    "c5",
+    "c4",
+    "c3",
+    "c2",
+    "c1",
+    "zr1",
+"zr1x",
+    "grand sport",
+    "muscle car",
+    "sports car",
+    "american car",
+    "car enthusiast",
+    "car collection",
+    "styled-components"
+  ],
+  "author": "James Avakian",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JamesAvakian622/react_thedigitalcollection/issues"
+  },
+  "homepage": "https://github.com/JamesAvakian622/react_thedigitalcollection#readme"
 }

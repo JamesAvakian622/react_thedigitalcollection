@@ -4,69 +4,117 @@ This project was bootstrapped with [Create React App](http://github.com/facebook
 
 ## Available Scripts
 
-In the project directory, you can run:
+corvette-site/
+├── public/
+│   └── index.html
+├── src/
+│   ├── components/
+│   │   ├── Navbar.jsx
+│   │   └── Hero.jsx
+│   ├── pages/
+│   │   └── Home.jsx
+│   ├── styles/
+│   │   └── GlobalStyles.js
+│   ├── App.jsx
+│   └── index.js
+├── package.json
+└── README.md
 
-### `npm start`
+my-corvette-site/
+├── api/                  ← Vercel treats this as serverless backend
+│   ├── index.js
+│   ├── upload.js
+│   ├── cloudinary.js
+│   ├── authMiddleware.js
+│   └── .env
+├── public/
+├── src/                  ← Your React frontend
+│   ├── components/
+│   ├── pages/
+│   └── App.jsx
+├── vercel.json
+├── package.json
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+🔒 5. Use Cloudinary’s API to Tag, Transform, Secure
+✅ Where to Put It:
+In backend (Node.js/Express) or directly in Cloudinary dashboard
 
-### `npm test`
+Use signed URLs for private access
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](http://facebook.github.io/create-react-app/docs/running-tests) for more information.
+✅ Example (Transform):
+const url = `https://res.cloudinary.com/yourCloudName/image/upload/w_800,h_600,c_fill,g_auto,q_auto/corvette.jpg`;
 
-### `npm run build`
+✅ Example (Secure Upload):
+Use signed upload with your backend:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+const cloudinary = require('cloudinary').v2;
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+cloudinary.uploader.upload(filePath, {
+  tags: ['corvette'],
+  transformation: [{ width: 800, crop: 'scale' }],
+  folder: 'corvettes',
+});
 
-See the section about [deployment](http://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+What Each Section Does
+"version": 2 → Required for Vercel’s latest configuration format.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+"builds":
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+@vercel/node compiles your Express backend in api/index.js.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+@vercel/static-build builds your React frontend using npm run build.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+"routes":
 
-## Learn More
+/api/* routes are forwarded to your Express server.
 
-You can learn more in the [Create React App documentation](http://facebook.github.io/create-react-app/docs/getting-started).
+All other routes (/, /gallery, /upload, etc.) serve your React app.
 
-To learn React, check out the [React documentation](http://reactjs.org/).
 
-### Code Splitting
 
-This section has moved here: [http://facebook.github.io/create-react-app/docs/code-splitting](http://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
 
-This section has moved here: [http://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](http://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
 
-This section has moved here: [http://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](http://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+🧭 Summary
+Feature	                Location	            Implementation Tip
 
-### Advanced Configuration
+Role-Based Access	    /upload, /garage	    Check idToken.claims.groups
 
-This section has moved here: [http://facebook.github.io/create-react-app/docs/advanced-configuration](http://facebook.github.io/create-react-app/docs/advanced-configuration)
+Cloudinary Integration	UploadWidget, Gallery	Use widget + API
 
-### Deployment
+Route Guards	        App.jsx	Use             <SecureRoute>
 
-This section has moved here: [http://facebook.github.io/create-react-app/docs/deployment](http://facebook.github.io/create-react-app/docs/deployment)
+Styled Components	    components/, styles/	Use ThemeProvider
 
-### `npm run build` fails to minify
+Cloudinary API (secure)	Backend or widget config	Use signed URLs
 
-This section has moved here: [http://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](http://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# http-github.com-JamesAvakian622-react_thedigitalcollection_sep7_25
-# vette_thedigitalcollection_sep7_25
+Okta Token Protection	Express middleware	    Decode JWT
+
+jamesavakian@Jamess-Mac-mini abc % sudo npm install -g vercel
+
+Password:
+npm warn deprecated path-match@1.2.4: This package is archived and no longer maintained. For support, visit https://github.com/expressjs/express/discussions
+
+added 240 packages in 2s
+
+
+jamesavakian@Jamess-Mac-mini abc % vercel login
+
+Vercel CLI 48.1.0
+> NOTE: The Vercel CLI now collects telemetry regarding usage of the CLI.
+> This information is used to shape the CLI roadmap and prioritize features.
+> You can learn more, including how to opt-out if you'd not like to participate in this program, by visiting the following URL:
+> https://vercel.com/docs/cli/about-telemetry
+
+  Visit vercel.com/device and enter LJGV-WSKV
+
+  Congratulations! You are now signed in.
+
+  To deploy something, run `vercel`.
+
+  💡 To deploy every commit automatically,
+  connect a Git Repository (vercel.link/git).
+jamesavakian@Jamess-Mac-mini abc % 

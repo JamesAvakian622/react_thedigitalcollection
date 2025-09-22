@@ -57,6 +57,13 @@ const ListItem = styled.li`
   margin-bottom: 0.5rem;
 `;
 
+const ImageBlock = styled.img`
+  width: 100%;
+  max-width: 600px;
+  margin: 1rem 0;
+  border-radius: 8px;
+`;
+
 const fadeIn = {
   hidden: { opacity: 0, y: 30 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
@@ -64,47 +71,70 @@ const fadeIn = {
 
 const CorvetteFuture = () => (
   <>
-
     <SectionWrapper initial="hidden" animate="visible" variants={fadeIn}>
-      <Title>The Corvette Future Products Description</Title>
-      <Subtitle>Ownership, Buying, and Model Insights</Subtitle>
+      <Title>The Cool Jimmy Corvette Software: Future Product Descriptions</Title>
+      <Subtitle>Insights into Corvette Ownership, Buying, and Maintenance</Subtitle>
+
       <Paragraph>
-
-        On-going Apple Hardware SwiftUI Software Development
-
-        The Corvette Future is your go-to resource for everything related to Corvette ownership. Whether you're buying your first Stingray or upgrading to a Z06, this site offers practical guidance and insider knowledge that goes beyond the showroom.
+        Ongoing Apple hardware and SwiftUI software development is shaping the future of Corvette-related applications. Whether you're buying your first Stingray or upgrading to a Z06, this site offers practical guidance and insider knowledge that goes beyond the showroom.
       </Paragraph>
+
       <List>
         <ListItem>Detailed buying guides for current and upcoming models</ListItem>
         <ListItem>Breakdown of trim levels, options, and performance packages</ListItem>
         <ListItem>OEM parts sourcing: who supplies them and where to find them</ListItem>
         <ListItem>Coverage of 2026 models, racing editions, and concept cars</ListItem>
       </List>
+
       <Paragraph>
         Built for buyers and owners, The Corvette Journal complements Chevrolet’s official resources by offering real-world insights, supplier connections, and a deeper look into the Corvette legacy.
       </Paragraph>
+
+      <Subtitle>Software Technology Deployed</Subtitle>
       <List>
-        <Paragraph><strong>Software Technology Deployed</strong></Paragraph>
-        <ListItem> 1. Apple SwiftUI</ListItem>
-        <ListItem> 2. Apple App Store Submission And Acceptance</ListItem><br /><br />
-        <ListItem><strong>  The Checkered-Flag.com eCommerce Website  </strong></ListItem>
-        <img src="/z3.png" alt="Corvette Model" />
-        <ListItem><strong>   Photography of Corvettes, Mobile #1 App   </strong></ListItem>
-        <img src="/z2.png" alt="Corvette Model" />
-        <ListItem><strong>  Corvettes Quiz, Watch Mobile #2 App  </strong></ListItem>
-        <img src="/z2.png" alt="Corvette Model" />
-        <ListItem><strong> Photography of Corvettes, Mobile Watch App  </strong></ListItem>
-        <img src="/z2.png" alt="Corvette Model" />
-        <ListItem>Coverage of 2026 models, racing editions, and concept cars</ListItem>
-        <ListItem>OEM parts sourcing: who supplies them and where to find them, Possible NEW app!</ListItem>
-
+        <ListItem>Apple SwiftUI</ListItem>
+        <ListItem>Apple App Store submission and acceptance</ListItem>
       </List>
+<div className="center">
+  
+      <ImageBlock src="/z3.png" alt="Corvette Model" />
+    <Subtitle>The Checkered-Flag.com eCommerce Website</Subtitle>
 
-    </SectionWrapper>
-    <h2>References</h2>
-    <ul>
-      <li><a href="http://mega-react-vette.vercel.app/Future" target="_blank" rel="noopener noreferrer">The Corvette App Journal Future</a></li>
-    </ul>
+    
+      <ImageBlock src="/z2.png" alt="Corvette Photography App" />
+  <Subtitle>Corvettes Personal Notes – Mobile #1 App</Subtitle>
+
+    
+      <ImageBlock src="/z2.png" alt="Corvette Quiz App" />
+  <Subtitle>Corvettes Quiz – Watch Mobile #2 App</Subtitle>
+
+      <ImageBlock src="/z2.png" alt="Corvette Watch App" />
+      <Subtitle>Corvette Photography – Mobile Watch App</Subtitle>
+
+      {/* <List>
+        <ListItem>Coverage of 2026 models, racing editions, and concept cars</ListItem>
+        <ListItem>OEM parts sourcing: who supplies them and where to find them — possible new app!</ListItem>
+      </List> */}
+      </div>
+  
+
+    <Title>References</Title>
+    <List>
+      <ListItem>
+        <a
+          href="http://mega-react-vette.vercel.app/Future"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          The Corvette App Journal Future
+        </a>
+      </ListItem>
+    </List>
+
+     <div className="center">
+        <img src="/opauto.png" alt="Corvette Hero" width={400} height={150} />
+      </div>
+   </SectionWrapper>
   </>
 );
 

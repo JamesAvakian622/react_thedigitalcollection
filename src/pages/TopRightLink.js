@@ -29,7 +29,7 @@ const StyledLink = styled(Link)`
 
 const TopRightLink = () => (
   <Container>
-    <StyledLink to="/TheCorvettePhotos">Photos</StyledLink>
+    {/* <StyledLink to="/TheCorvettePhotos">Photos</StyledLink> */}
   </Container>
 );
 

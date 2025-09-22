@@ -1,7 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
-import './components/Nav.css'
+import './components/Nav.css';
+
 const SectionWrapper = styled(motion.section)`
   background-color: #fff;
   padding: 2rem;
@@ -64,23 +65,37 @@ const fadeIn = {
 
 const CorvetteReporter = () => (
   <>
-    <div className='image'>
-      <img src="/z1.png" alt="Corvette Model" />
+    <div className="center">
+      <div className="responsive">
+        <div className="gallery100">
+          <a href="/z1.png" target="_blank" rel="noopener noreferrer">
+            <img src="/z1.png" alt="Corvette Images Information" width="100%" height="100%" />
+          </a>
+        </div>
+      </div>
     </div>
+
     <SectionWrapper initial="hidden" animate="visible" variants={fadeIn}>
       <Title>The Corvette Reporter.com</Title>
-      <Subtitle>MotorSports, Corvette Clubs, Corvetter Youtube Reports, and Model Insights</Subtitle>
+      <Subtitle>Insights into Corvette Motorsports, Enthusiast Clubs, YouTube Reporters, and Model History</Subtitle>
+
       <Paragraph>
-        The Corvette Journal is your go-to resource for everything related to Corvette and Motorsports. Whether you're buying your first Stingray or upgrading to a Z06, this site offers practical guidance and insider knowledge that goes beyond the showroom.
+        The Corvette Reporter is your go-to resource for everything related to Corvette and motorsports. Whether you're buying your first Stingray or upgrading to a Z06, this site offers practical guidance and insider knowledge that goes beyond the showroom.
       </Paragraph>
+
       <List>
-        <ListItem>Detailed buying guides for current MotorSport information</ListItem>
-        <ListItem>Breakdown of Tracks, Racers, and Detailed Information</ListItem>
-        <ListItem>Locations of related places to drive, vacations, and race your Corvette Car</ListItem>
+        <ListItem>Buying guides and motorsport coverage</ListItem>
+        <ListItem>Breakdowns of tracks, racers, and event details</ListItem>
+        <ListItem>Locations for driving, racing, and Corvette-themed vacations</ListItem>
       </List>
+
       <Paragraph>
-        Built for buyers and owners, The Corvette Journal complements Chevrolet’s official resources by offering real-world insights, supplier connections, and a deeper look into the Corvette legacy.
+        Built for buyers and owners, The Corvette Reporter complements Chevrolet’s official resources by offering real-world insights, supplier connections, and a deeper look into the Corvette legacy.
       </Paragraph>
+
+      <div className="center">
+        <img src="/opauto.png" alt="Corvette Hero" width={400} height={150} />
+      </div>
     </SectionWrapper>
   </>
 );

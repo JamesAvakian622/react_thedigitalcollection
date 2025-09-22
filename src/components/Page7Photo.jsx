@@ -160,9 +160,9 @@ const GridContainer = styled.div`
 
 
   const slides = [
-    { id: 1, image: "https://via.placeholder.com/400", title: "Slide 1" },
-    { id: 2, image: "https://via.placeholder.com/400", title: "Slide 2" },
-    { id: 3, image: "https://via.placeholder.com/400", title: "Slide 3" }
+    { id: 1, image: "http://via.placeholder.com/400", title: "Slide 1" },
+    { id: 2, image: "http://via.placeholder.com/400", title: "Slide 2" },
+    { id: 3, image: "http://via.placeholder.com/400", title: "Slide 3" }
   ];
 
   // useEffect(() => {
@@ -235,7 +235,7 @@ const GridContainer = styled.div`
 
       <div className="references">
             <h1>References</h1>
-            <Link to="https://www.chevrolet.com/performance/corvette">   1. Chevrolet.com, "Colors That Capitave, The Stingray". </Link>
+            <Link to="http://www.chevrolet.com/performance/corvette">   1. Chevrolet.com, "Colors That Capitave, The Stingray". </Link>
           </div>
 
       <div className="clearfix" />

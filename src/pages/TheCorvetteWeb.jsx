@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
-import {Link} from 'react-router-dom';
-import TopRightLink from './TopRightLink';
+import { Link } from 'react-router-dom';
+// import TopRightLink from './TopRightLink';
 
 const SectionWrapper = styled(motion.section)`
   background-color: #fff;
@@ -64,44 +64,71 @@ const fadeIn = {
   visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
 };
 
-const CorvetteWeb = () => (
-  <>
+const CorvetteWeb = () => {
+  return (
+    <>
+      <SectionWrapper initial="hidden" animate="visible" variants={fadeIn}>
+        {/* <TopRightLink /> */}
+        <Title>The Corvette Web.com</Title>
+        <Subtitle>Corvette Car Photography, Ownership, Buying, and Model Insights</Subtitle>
 
-  <SectionWrapper initial="hidden" animate="visible" variants={fadeIn}>
-    <TopRightLink />
-    <Title>The Corvette Web.com</Title>
-    <Subtitle>Corvette Car Photography, Ownership, Buying, and Model Insights</Subtitle>
-    <Paragraph>
-        The Corvette Reporter is your go-to resource for everything related to Corvette ownership and The Corvette Experience. Whether you're buying your first Stingray or upgrading to a Z06, this site offers practical guidance and insider knowledge that goes beyond the showroom.
-    </Paragraph>
-    <List>
-      <ListItem>Detailed buying guides for current and upcoming models</ListItem>
-      <ListItem>Breakdown of trim levels, options, and performance packages</ListItem>
-      <ListItem>OEM parts sourcing: who supplies them and where to find them</ListItem>
-      <ListItem>Coverage of 2026 models, racing editions, and concept cars</ListItem>
-    </List>
-    <Paragraph>
-        This Information Source was developed for buyers and owners, The Corvette Journal complements Chevrolet’s official resources by offering real-world insights, supplier connections, and a deeper look into the Corvette legacy.
-    </Paragraph>
-    <Paragraph>
-      <h2><b>Internet Software Technologies</b></h2>This website is built using the latest web technologies to provide a seamless experience for users. For buyers and owners, The Corvette Journal complements Chevrolet’s official resources by offering real-world insights, supplier connections, and a deeper look into the Corvette legacy.
-      <h3><b> Website Technology, Pages</b></h3>
-      <ul>
-        <li>This website utilizs the latest cutting edge Full Stack React JavaScript Software Development production technologies. We implement React.js for building user interfaces</li>
-        <li>React Javascript, React Router for page routing</li>
-        <li>Cloudinary, Image Photo Server</li>
-        <li>Styled-components for styling</li>
-        <li>Header Text Link Navigation</li>
-        <li>Framer Motion for animations</li>
-      </ul>
-    </Paragraph>
+        <Paragraph>
+          The Corvette Reporter is your go-to resource for everything related to Corvette ownership and the Corvette experience. Whether you're buying your first Stingray or upgrading to a Z06, this site offers practical guidance and insider knowledge that goes beyond the showroom.
+        </Paragraph>
+
+        <List>
+          <ListItem>Detailed buying guides for current and upcoming models</ListItem>
+          <ListItem>Breakdown of trim levels, options, and performance packages</ListItem>
+          <ListItem>OEM parts sourcing: who supplies them and where to find them</ListItem>
+          <ListItem>Coverage of 2026 models, racing editions, and concept cars</ListItem>
+        </List>
+
+        <Paragraph>
+          Developed for buyers and owners, The Corvette Journal complements Chevrolet’s official resources by offering real-world insights, supplier connections, and a deeper look into the Corvette legacy.
+        </Paragraph>
+
+        <Title>Internet Software Technologies</Title>
+        <Paragraph>
+          This website is built using the latest web technologies to provide a seamless experience for users. It complements Chevrolet’s official resources by offering real-world insights, supplier connections, and a deeper look into the Corvette legacy.
+        </Paragraph>
+
+        <Subtitle>Website Technology & Pages</Subtitle>
+        <List>
+          <ListItem>Full-stack React JavaScript development</ListItem>
+          <ListItem>React.js for building user interfaces</ListItem>
+          <ListItem>React Router for page routing</ListItem>
+          <ListItem>Cloudinary for image hosting</ListItem>
+          <ListItem>JSON for data storage</ListItem>
+          <ListItem>Meta tags for optimized SEO</ListItem>
+          <ListItem>React Hook Form for form handling</ListItem>
+          <ListItem>Styled-components for styling</ListItem>
+          <ListItem>Header text link navigation</ListItem>
+          <ListItem>Framer Motion for animations</ListItem>
+        </List>
+    
+
+      <Title>References</Title>
+      <List>
+        <ListItem>
+          <a href="http://www.TheCorvetteWeb.com/" target="_blank" rel="noopener noreferrer">
+            The Corvette Web
+          </a>
+        </ListItem>
+        {/* <ListItem>
+          <a href="http://mega-react-vette.vercel.app" target="_blank" rel="noopener noreferrer">
+            The Corvette Journal
+          </a>
+        </ListItem> */}
+      </List>
+
+           <div className="center">
+        <img src="/opauto.png" alt="Corvette Hero" width={400} height={150} />
+      </div>
   </SectionWrapper>
-  <h2>References</h2>
-  <ul>
-    <li><a href="https://www.TheCorvetteWeb.com/" target="_blank" rel="noopener noreferrer">The Corvette Web</a></li>
-    <li><a href="https://mega-react-vette.vercel.app" target="_blank" rel="noopener noreferrer">The Corvette Journal</a></li>
-  </ul>
-  </>
-);
+
+
+    </>
+  );
+};
 
 export default CorvetteWeb;

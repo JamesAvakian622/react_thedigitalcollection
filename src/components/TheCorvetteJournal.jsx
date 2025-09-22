@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
-import './components/Nav.css'
+import './components/Nav.css';
 
 const SectionWrapper = styled(motion.section)`
   background-color: #fff;
@@ -65,28 +65,40 @@ const fadeIn = {
 
 const CorvetteJournal = () => (
   <>
-  <div className='image'>
-    <img src="/z1.png" alt="Corvette Model" />
-  </div>
-  
-  
-  <SectionWrapper initial="hidden" animate="visible" variants={fadeIn}>
+    <div className="center">
+      <div className="responsive">
+        <div className="gallery100">
+          <a href="/z1.png" target="_blank" rel="noopener noreferrer">
+            <img src="/z1.png" alt="Corvette Images Information" width="100%" height="100%" />
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <SectionWrapper initial="hidden" animate="visible" variants={fadeIn}>
       <Title>The Corvette Journal.com</Title>
-      <Subtitle>Ownership, Buying, and Model Insights</Subtitle>
+      <Subtitle>Insights into Corvette Ownership, Buying, and Maintenance</Subtitle>
+
       <Paragraph>
         The Corvette Journal is your go-to resource for everything related to Corvette ownership. Whether you're buying your first Stingray or upgrading to a Z06, this site offers practical guidance and insider knowledge that goes beyond the showroom.
       </Paragraph>
+
       <List>
         <ListItem>Detailed buying guides for current and upcoming models</ListItem>
         <ListItem>Breakdown of trim levels, options, and performance packages</ListItem>
         <ListItem>OEM parts sourcing: who supplies them and where to find them</ListItem>
         <ListItem>Coverage of 2026 models, racing editions, and concept cars</ListItem>
       </List>
+
       <Paragraph>
-        Built for buyers and owners, The Corvette Journal complements Chevrolet’s official resources by offering real-world insights, supplier connections, and a deeper look into the Corvette legacy.
-        <br /><br />
+        Designed for new buyers, owners, and enthusiasts, The Corvette Journal complements Chevrolet’s official resources by offering real-world insights, supplier connections, and a deeper look into the Corvette legacy.
       </Paragraph>
-    </SectionWrapper></>
+
+      <div className="center">
+        <img src="/opauto.png" alt="Corvette Hero" width={400} height={150} />
+      </div>
+    </SectionWrapper>
+  </>
 );
 
 export default CorvetteJournal;
